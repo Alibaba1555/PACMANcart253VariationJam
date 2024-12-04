@@ -1,5 +1,5 @@
 import Pacman from "./Pacman.js";
-// import Enemy from "/source/Enemy.js";
+// import Enemy from "./Enemy.js";
 import MovingDirection from "./MovingDirection.js";
 
 export default class TileMap{
@@ -7,13 +7,13 @@ export default class TileMap{
     this.tileSize = tileSize;
     
     this.yellowDot = new Image();
-    this.yellowDot.src = "../image/yellowdot.png"; //import form yellowDot photo
+    this.yellowDot.src = "./image/yellowDot.png"; //import form yellowDot photo
 
     this.pinkDot = new Image();
-    this.pinkDot.src = "../image/pinkDot.png";
+    this.pinkDot.src = "./image/pinkDot.png";
 
     this.wall = new Image();
-    this.wall.src = "../image/wall.png"; //import form wall photo
+    this.wall.src = "./image/wall.png"; //import form wall photo
 
     this.powerDot = this.pinkDot; 
     this.powerDotAnmationTimerDefault = 30; //dot flash animation (speed)
