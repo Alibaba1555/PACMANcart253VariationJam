@@ -1,10 +1,12 @@
 # PACMAN- 8 variations
 Tianshun Wu
 
-## [View the project online](URL_TO_THE_PROJECT)
+## [View the project online](https://alibaba1555.github.io/PACMANcart253VariationJam/)
 
 ## Description
 This is a PACMAN game with eight variations.
+Players need to control Pacman to eat all the dots on the map to win the game. 
+Power Dot will temporarily give the player's Pacman the ability to eat ghosts.
 
 - 0. Classic Mode (easy or hard)
 Original gameplay.

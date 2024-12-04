@@ -17,7 +17,7 @@ export default class Enemy {
             Math.random() * Object.keys(MovingDirection).length // Random value between 0 and the number of directions
           );
 
-          this.directionTimerDefault = this.#random(10, 25); // Duration between 10 and 25 frames / change the difficulty, how long it takes for the enemy to change direction
+          this.directionTimerDefault = this.#random(1, 6); // Duration between 1 and 6 frames / change the difficulty, how long it takes for the enemy to change direction
           this.directionTimer = this.directionTimerDefault
 
           this.scaredAboutToExpireTimerDefault = 10;
