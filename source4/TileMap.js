@@ -1,6 +1,6 @@
-import Pacman from "/source4/Pacman.js";
-import Enemy from "/source4/Enemy.js";
-import MovingDirection from "/source4/MovingDirection.js";
+import Pacman from "./Pacman.js";
+import Enemy from "./Enemy.js";
+import MovingDirection from "./MovingDirection.js";
 
 export default class TileMap{
     constructor(tileSize){

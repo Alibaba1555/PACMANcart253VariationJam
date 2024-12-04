@@ -1,4 +1,4 @@
-import MovingDirection from "/source5/MovingDirection.js";
+import MovingDirection from "./MovingDirection.js";
 
 export default class Enemy {
 

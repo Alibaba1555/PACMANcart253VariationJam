@@ -1,4 +1,4 @@
-import TileMap from "/source2/TileMap.js";
+import TileMap from "./TileMap.js";
 
 const tileSize = 32; // Each square is 32px
 const velocity = 2; //pacman moving distance / speed
