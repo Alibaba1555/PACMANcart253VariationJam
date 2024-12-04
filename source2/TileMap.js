@@ -7,13 +7,13 @@ export default class TileMap{
     this.tileSize = tileSize;
     
     this.yellowDot = new Image();
-    this.yellowDot.src = "../image2/yellowdot.png"; //import form yellowDot photo
+    this.yellowDot.src = "./image2/yellowDot.png"; //import form yellowDot photo
 
     this.pinkDot = new Image();
-    this.pinkDot.src = "../image2/pinkDot.png";
+    this.pinkDot.src = "./image2/pinkDot.png";
 
     this.wall = new Image();
-    this.wall.src = "../image2/wall.png"; //import form wall photo
+    this.wall.src = "./image2/wall.png"; //import form wall photo
 
     this.powerDot = this.pinkDot; 
     this.powerDotAnmationTimerDefault = 30; //dot flash animation (speed)
