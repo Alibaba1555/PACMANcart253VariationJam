@@ -48,5 +48,68 @@
       <canvas id="gameCanvas"></canvas>
     </div>
     <script src="./source4/game.js" type="module"></script>
+    <script>
+(() => {
+  const canvas = document.getElementById('gameCanvas');
+  if (!canvas) return;
+
+  const wrapper = canvas.parentElement;
+
+  // 保留原来的标题、画布和菜单布局，整体缩放
+  Object.assign(document.body.style, {
+    margin: '0',
+    width: '100%',
+    height: '100vh',
+    overflow: 'hidden',
+    display: 'block'
+  });
+
+  Object.assign(wrapper.style, {
+    position: 'absolute',
+    display: 'block',
+    transformOrigin: 'top left'
+  });
+
+  function fitGame() {
+    const width = Math.max(canvas.width, 640);
+
+    wrapper.style.width = width + 'px';
+    wrapper.style.transform = 'none';
+
+    const height = wrapper.offsetHeight;
+    if (!height) return;
+
+    const padding = 16;
+    const scale = Math.min(
+      (window.innerWidth - padding * 2) / width,
+      (window.innerHeight - padding * 2) / height,
+      1
+    );
+
+    wrapper.style.left =
+      (window.innerWidth - width * scale) / 2 + 'px';
+
+    wrapper.style.top =
+      (window.innerHeight - height * scale) / 2 + 'px';
+
+    wrapper.style.transform = `scale(${scale})`;
+  }
+
+  window.addEventListener('resize', fitGame);
+  window.addEventListener('load', fitGame);
+
+  // 地图初始化或模式变化后，重新计算尺寸
+  new MutationObserver(fitGame).observe(canvas, {
+    attributes: true,
+    attributeFilter: ['width', 'height']
+  });
+
+  if (document.fonts) {
+    document.fonts.ready.then(fitGame);
+  }
+
+  fitGame();
+})();
+</script>
   </body>
 </html>
