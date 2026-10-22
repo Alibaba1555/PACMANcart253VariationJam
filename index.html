@@ -51,6 +51,58 @@
         position: relative;
       }
     </style>
+    <style>
+  /* 标题缩小，减少上下空白 */
+  body > div > h1 {
+    font-size: 72px;
+    line-height: 1;
+    margin: 12px 0 24px;
+  }
+
+  /* 菜单完整放进标题下方的黑色画布区域 */
+  #gameModes {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 544px;
+    box-sizing: border-box;
+    transform: none;
+    margin: 0;
+    padding: 24px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #gameModes h2 {
+    font-size: 24px;
+    line-height: 1.5;
+    margin: 0 0 20px;
+  }
+
+  #gameModes p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0 0 20px;
+  }
+
+  #gameModes ul {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  #gameModes li {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 10px 0;
+    white-space: nowrap;
+  }
+</style>
   </head>
   <body>
     <div style="position: relative; display: inline-block">
